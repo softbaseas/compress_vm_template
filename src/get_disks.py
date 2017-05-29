@@ -4,8 +4,6 @@ import shutil import copyfile
 import os
 
 disks = sys.argv[1].replace("\'", "")
-print "argument length: %s" % (len(sys.argv))
-
 dstroot = "./"
 
 if (len(sys.argv) == 2):

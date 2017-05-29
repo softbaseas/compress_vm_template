@@ -4,7 +4,7 @@ import shutil
 import os
 
 disks = sys.argv[1].replace("\'", "")
-print "argument length: %s" %s (len(sys.argv))
+print "argument length: %s" % (len(sys.argv))
 
 if (len(sys.argv)==2):
     dstroot = "./test-folder"

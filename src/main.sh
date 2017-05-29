@@ -4,6 +4,8 @@
 vmfile=$1
 outputDir=$2
 
+echo $outputDir
+
 if [ -z ${1+x} ]; then
   echo "Usage: ./compress_template.sh <path to vm.cfg file> [output directory]"
 else

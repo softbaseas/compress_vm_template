@@ -3,7 +3,7 @@
 
 vmfile=$1
 
-if [ -z ${vmfile+x} ]; then
+if [ -z ${1+x} ]; then
   echo "Usage: ./compress_template.sh <path to vm.cfg file>"
 else
   echo "Argument is set: $vmfile"

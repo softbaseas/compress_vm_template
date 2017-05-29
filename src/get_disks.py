@@ -8,7 +8,7 @@ print "argument length: %s" %s (len(sys.argv))
 
 if (len(sys.argv)==2):
     dstroot = "./test-folder"
-else
+else:
     dstroot = sys.argv[2]
 
 #os.makedirs(dstroot)

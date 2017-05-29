@@ -1,4 +1,5 @@
 #!/usr/bin/python
 import sys
 
-print sys.argv[1]
+path = sys.argv[1].replace("\'", "")
+print path

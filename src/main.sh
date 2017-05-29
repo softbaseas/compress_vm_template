@@ -7,7 +7,7 @@ if [ -z ${1+x} ]; then
   echo "Usage: ./compress_template.sh <path to vm.cfg file>"
 else
   echo "Argument is set: $vmfile"
-  ./src/get_disks.py `grep disk $vmfile | sed 's/disk = \[//g' | sed 's/file://g' | sed 's/xv\w\+//g' | sed 's/,,w!//g' | sed 's/,,w//g' | sed 's/ //g' | sed 's/.$//' | sed 's/\'//g'`
+  ./src/get_disks.py `grep disk $vmfile | sed 's/disk = \[//g' | sed 's/file://g' | sed 's/xv\w\+//g' | sed 's/,,w!//g' | sed 's/,,w//g' | sed 's/ //g' | sed 's/.$//'`
 fi
 
 
@@ -20,9 +20,8 @@ fi
 # sed 's/,,w//g'        : Remove ",,w" from the string
 # sed 's/ //g'          : Remove all spaces in the string
 # sed 's/.$//'          : Remove the last character in the string ("]")
-# sed 's/\'//g'         : Remove all apostrophes in the string
 
-#disks_str=`grep disk $vmfile | sed 's/disk = \[//g' | sed 's/file://g' | sed 's/xv\w\+//g' | sed 's/,,w!//g' | sed 's/,,w//g' | sed 's/ //g' | sed 's/.$//' | sed 's/\'//g'`
+#disks_str=`grep disk $vmfile | sed 's/disk = \[//g' | sed 's/file://g' | sed 's/xv\w\+//g' | sed 's/,,w!//g' | sed 's/,,w//g' | sed 's/ //g' | sed 's/.$//'`
 #disks=$(echo $disks_str | tr "," "\n")
 
 #for disk in $disks do

@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 # author: Anders Wiberg Olsen (anders@wiberg.tech)
 
 if [ -z ${$1+x} ]; then

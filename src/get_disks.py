@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import sys
-import shutil import copyfile
+from shutil import copyfile
 import os
 
 disks = sys.argv[1].replace("\'", "")

@@ -6,7 +6,7 @@ disks = sys.argv[1].replace("\'", "")
 
 dstroot = "./test-folder"
 
-os.makedirs(dstroot)
+#os.makedirs(dstroot)
 
 count = 0
 for disk in disks.split(","):

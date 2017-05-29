@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import sys
-import shutil
+import shutil import copyfile
 import os
 
 disks = sys.argv[1].replace("\'", "")
@@ -20,7 +20,9 @@ count = 0
 for disk in disks.split(","):
     print "Disk %s = %s" % (count,disk)
     diskname = "%sdisk%s" % (dstroot,count)
-    file = open(diskname,"w")
-    file.write(disk)
-    file.close
+    print os.path.basename(disk)
+    #copyfile(disk,diskname)
+    #file = open(diskname,"w")
+    #file.write(disk)
+    #file.close
     count += 1;

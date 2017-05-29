@@ -1,3 +1,3 @@
 #!/bin/bash
 git pull
-./src/main.sh
+./src/main.sh $1

@@ -1,10 +1,15 @@
 #!/usr/bin/python
 import sys
 import shutil
+import os
 
 disks = sys.argv[1].replace("\'", "")
+print "argument length: %s" %s (len(sys.argv))
 
-dstroot = "./test-folder"
+if (len(sys.argv)==2):
+    dstroot = "./test-folder"
+else
+    dstroot = sys.argv[2]
 
 #os.makedirs(dstroot)
 

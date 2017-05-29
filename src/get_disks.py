@@ -1,5 +1,9 @@
 #!/usr/bin/python
 import sys
 
-path = sys.argv[1].replace("\'", "")
-print path
+disks = sys.argv[1].replace("\'", "")
+
+count = 0
+for disk in disks.split(","):
+    print "Disk %s = %s" % (count,disk)
+    count += 1;

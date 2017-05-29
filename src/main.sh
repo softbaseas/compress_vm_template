@@ -24,5 +24,5 @@ disks_str=`grep disk test_vm.cfg | sed 's/disk = \[//g' | sed 's/file://g' | sed
 disks=$(echo $disks_str | tr "," "\n")
 
 for disk in $disks do
-  echo "> [$disk]"
+  echo "> $disk"
 done

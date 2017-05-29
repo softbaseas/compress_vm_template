@@ -16,9 +16,9 @@ if not os.path.exists(dstroot):
 
 count = 0
 for disk in disks.split(","):
-    print "Disk %s = %s" % (count,disk)
-    diskname = "%sdisk%s" % (dstroot,count)
-    print os.path.basename(disk)
+    #print "Disk %s = %s" % (count,disk)
+    diskname = "%s%s" % (dstroot,os.path.basename(disk))
+    print diskname
     #copyfile(disk,diskname)
     #file = open(diskname,"w")
     #file.write(disk)

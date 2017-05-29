@@ -2,12 +2,13 @@
 # author: Anders Wiberg Olsen (anders@wiberg.tech)
 
 vmfile=$1
+outputDir=$2
 
 if [ -z ${1+x} ]; then
-  echo "Usage: ./compress_template.sh <path to vm.cfg file>"
+  echo "Usage: ./compress_template.sh <path to vm.cfg file> [output directory]"
 else
   echo "Argument is set: $vmfile"
-  ./src/get_disks.py `grep disk $vmfile | sed 's/disk = \[//g' | sed 's/file://g' | sed 's/xv\w\+//g' | sed 's/,,w!//g' | sed 's/,,w//g' | sed 's/ //g' | sed 's/.$//'`
+  ./src/get_disks.py `grep disk $vmfile | sed 's/disk = \[//g' | sed 's/file://g' | sed 's/xv\w\+//g' | sed 's/,,w!//g' | sed 's/,,w//g' | sed 's/ //g' | sed 's/.$//'` $outputDir
 fi
 
 

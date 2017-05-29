@@ -1,8 +1,10 @@
 #!/bin/bash
 # author: Anders Wiberg Olsen (anders@wiberg.tech)
 
-if [ -z ${1+x} ]; then
-  echo "No argument is set..."
+vmfile=$1
+
+if [ -z ${vmfile+x} ]; then
+  echo "Usage: ./compress_template.sh <path to vm.cfg file>"
 else
-  echo "Argument is set: $1"
+  echo "Argument is set: $vmfile"
 fi

@@ -20,8 +20,8 @@ fi
 # sed 's/ //g'          : Remove all spaces in the string
 # sed 's/.$//'          : Remove the last character in the string ("]")
 
-disks_str=grep disk test_vm.cfg | sed 's/disk = \[//g' | sed 's/file://g' | sed 's/xv\w\+//g' | sed 's/,,w!//g' | sed 's/,,w//g' | sed 's/ //g' | sed 's/.$//'
-disks=$(echo $disks | tr "," "\n")
+disks_str = grep disk test_vm.cfg | sed 's/disk = \[//g' | sed 's/file://g' | sed 's/xv\w\+//g' | sed 's/,,w!//g' | sed 's/,,w//g' | sed 's/ //g' | sed 's/.$//'
+disks=$(echo $disks_str | tr "," "\n")
 
 for disk in $disks do
   echo "> [$disk]"

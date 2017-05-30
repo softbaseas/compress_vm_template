@@ -13,7 +13,7 @@ else:
 
 if not os.path.exists(dstroot):
     os.makedirs(dstroot)
-
+31
 count = 0
 for disk in disks.split(","):
     #print "Disk %s = %s" % (count,disk)
